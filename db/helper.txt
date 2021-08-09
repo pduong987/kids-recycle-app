@@ -1,0 +1,15 @@
+Category.create!(title: "Toys")
+Category.create!(title: "Books")
+Category.create!(title: "Educational")
+Category.create!(title: "Outdoor")
+Category.create!(title: "Indoor")
+
+
+user1 = User.first
+user2 = User.second
+
+cat1 = Category.first
+cat2 = Category.second
+
+
+Listing.create!(title: "Pet Pony", description: "A Lovely toy", status: "available", price: 45.78, location: "Surry Hills", seller_user_id: user1.id, buyer_user_id:user2.id, category_id: cat1.id)
