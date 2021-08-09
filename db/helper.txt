@@ -13,3 +13,5 @@ cat2 = Category.second
 
 
 Listing.create!(title: "Pet Pony", description: "A Lovely toy", status: "available", price: 45.78, location: "Surry Hills", seller_user_id: user1.id, buyer_user_id:user2.id, category_id: cat1.id)
+
+Listing.create!(title: "Harry Potter", description: "A Lovely book", status: "available", price: 25.00, location: "Surry Hills", seller_user_id: user1.id, buyer_user_id:user2.id, category_id: cat1.id)

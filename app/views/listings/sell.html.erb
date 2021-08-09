@@ -1,0 +1,19 @@
+<h1>Sell some shit!<h1>
+<%= form_with url: "/listings/create", method: :post do |form| %>
+  <%= form.label :title, "Title:" %>
+  <%= form.text_field :title %>
+
+  <br />
+  <%= form.label :category, "Category:" %>
+  <br />
+  <%= form.text_area :description %>
+  <br />
+  <%= form.select(:category_id) do %>
+      <% @categories.each do |l| -%>
+        <%= content_tag(:option, l.title, value: l.id) %>
+      <% end %>
+  <% end %> 
+
+
+  <%= form.submit "Create" %>
+<% end %>
