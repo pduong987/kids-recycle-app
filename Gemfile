@@ -26,6 +26,8 @@ gem 'devise'
 # Postgres support
 gem 'pg'
 
+gem 'bootstrap', '~> 5.0.1'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

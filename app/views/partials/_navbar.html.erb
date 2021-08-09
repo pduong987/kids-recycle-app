@@ -1,5 +1,5 @@
 <%if current_user != nil%>
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
 <%else%> 
-<%= link_to "Login", "users/sign_in", method: :get %>
+  <%= link_to 'Login', 'users/sign_in', method: :get , class: "btn btn-success"%>
 <%end%>
