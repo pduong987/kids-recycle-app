@@ -15,6 +15,10 @@ class ListingsController < ApplicationController
   def swap
   end
 
+  def show
+    @listing = Listing.find(params[:listing_id])
+  end
+
   def buy
   end
 
@@ -37,7 +41,7 @@ class ListingsController < ApplicationController
     if @result
 
       # Send user to home page, but later to the specific listing e.g /listings/123/show
-      redirect_to root_url
+      redirect_to '/listings/' + @listing.id.to_s
     else
       # If something goes wrong, show sell page again
 
