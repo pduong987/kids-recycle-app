@@ -2,6 +2,6 @@
         <%= link_to 'Sell', '/listings/sell', method: :get , class: "btn btn-success"%>
 <ul>
 <% @listings.each do |item|%>
-    <li><%= item.title%> (<%= item.description%>)</li>
+<li><%= link_to item.title, '/listings/' + item.id.to_s, method: :get %></li>
  <% end %>
  </ul>

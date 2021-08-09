@@ -16,8 +16,16 @@ class ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find(params[:listing_id])
+    @listing = Listing.find(params[:id])
   end
+
+  def delete
+
+    Listing.find(params[:id]).destroy
+
+    redirect_to :controller => 'listings', :action => 'index'
+
+  end  
 
   def buy
   end
