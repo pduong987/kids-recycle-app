@@ -1,16 +1,38 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Kids Recycle</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kids Recycle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+ 
+  </div>
+
+
+  <div class="collapse navbar-collapse navbar-btn" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/listings/sell">Sell</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/listings/index">Buy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/listings/swap">Swap</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/listings/free">Free</a>
+      </li>      
       <%if current_user != nil%>
         <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
       <%else%> 
         <%= link_to 'Login', '/users/sign_in', method: :get , class: "btn btn-success"%>
       <%end%>     
-    </ul>
+    </ul>  
+  </div>
+
+
+
   </div>
 </nav>
