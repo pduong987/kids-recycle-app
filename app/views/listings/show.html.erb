@@ -2,5 +2,24 @@
 
 <p> Hellloooo, <%= @listing.title%> </p>
 
+<%= form_with url: "/listings/" + @listing.id.to_s, method: :patch do |form| %>
+  <%= form.label :title, "Title:" %>
+  <%= form.text_field :title, value: @listing.title %>
+
+  <br />
+  <%= form.label :category, "Category:" %>
+  <br />
+  <%= form.text_area :description, value: @listing.description %>
+  <br />
+  <%= form.select(:category_id, :selected => @listing[:category_id]) do %>
+      <% @categories.each do |l| -%>
+        <%= content_tag(:option, l.title, value: l.id) %>
+      <% end %>
+  <% end %> 
+
+
+  <%= form.submit "Save" %>
+<% end %>
+
 
 <%= link_to("Delete", "/listings/" + @listing.id.to_s, method: :delete, class: "btn btn-danger")%>

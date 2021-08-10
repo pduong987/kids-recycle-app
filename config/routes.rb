@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'listings/swap'
   get 'listings/buy'
   get 'listings/:id', to: 'listings#show'
+  patch 'listings/:id', to: 'listings#edit'
   delete 'listings/:id', to: 'listings#delete'
   get 'home/index'
   devise_for :users
